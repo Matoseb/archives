@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Digitec Live</title>
+    <style>body {white-space: pre}</style>
+</head>
+
+<body>
+    <script>
+    fetch("https://www.digitec.ch/api/graphql", {
+            credentials: "omit",
+            headers: {
+                "accept": "*/*",
+                "accept-language": "en-US",
+                "cache-control": "no-cache",
+                "content-type": "application/json",
+                "pragma": "no-cache",
+                "x-dg-correlation-id": "361feeb5-0fdf-4578-bed2-13f2d8398666",
+                "x-dg-country": "ch",
+                "x-dg-customertype": "standard",
+                "x-dg-loginstatus": "loggedOut",
+                "x-dg-mandator": "406802",
+                "x-dg-portal": "25",
+                "x-dg-routename": "index",
+                "x-dg-scrumteam": "Rocket",
+                "x-dg-sessionz": "Zgu4r9+SaJHM1yawqlcDRg==",
+                "x-dg-userid": "undefined"
+            },
+            referrer: "https://www.digitec.ch/en",
+            referrerPolicy: "no-referrer-when-downgrade",
+            body: "[{\"operationName\":\"GET_SOCIAL_SHOPPINGS\",\"variables\":{\"take\":6,\"latest\":null},\"query\":\"query GET_SOCIAL_SHOPPINGS($take:Int,$latest:String) {\\n  socialShopping(take:$take, latest:$latest) {\\n    latestTransactionTimeStamp\\n    items {\\n      id\\n      userName\\n      cityName\\n      dateTime\\n      imageUrl\\n      brandName\\n      fullProductName\\n      salesPrice {\\n        ...VatMoneySum\\n        __typename\\n      }\\n      oAuthProviderName\\n      targetUserName\\n      quote\\n      voteTypeId\\n      productTypeName\\n      socialShoppingTransactionTypeId\\n      url\\n      rating\\n      searchString\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment VatMoneySum on VatMoneySum {\\n  amountIncl\\n  amountExcl\\n  currency\\n  __typename\\n}\\n\"}]",
+            method: "POST",
+            mode: "cors"
+        })
+        .then(async response => {
+
+            let data = await response.json();
+            data = JSON.stringify(data, null, 4);
+            document.body.innerText = data;
+
+        }).catch(e => console.log(e));
+    </script>
+</body>
+
+</html>
