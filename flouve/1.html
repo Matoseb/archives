@@ -79,7 +79,27 @@
     .wb-autocomplete-suggestion.selected {
         background: #f0f0f0;
     }
+
+    #fuck-off {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+
+    #fuck-off a {
+        color: blue;
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+    }
     </style>
+    <div id="fuck-off"><div><h1>Link expired cuz u suck.</h1><small>But if you insist <a onclick="document.querySelector('#fuck-off').style.display='none';">.</a></small></div></div>
     <div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
     </div>
     <script type="text/javascript">
