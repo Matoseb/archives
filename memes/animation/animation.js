@@ -84,6 +84,7 @@
 			addText('JURYYYYYYYY', -8, 10);
 			await UTILS.delay(0.5*1000);
 			rotateAll();
+			await UTILS.delay(0.5*1000);
 			addOverlay();
 			await UTILS.delay(1*1000);
 			addFlames();
