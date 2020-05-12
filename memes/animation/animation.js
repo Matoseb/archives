@@ -9,8 +9,8 @@
 
     function start() {
 
-        if (!window.location.hash.includes(HASH_NAME) || ENABLED)
-            return;
+        // if (!window.location.hash.includes(HASH_NAME) || ENABLED)
+        //     return;
 
         ENABLED = true;
 
@@ -123,20 +123,19 @@
             for (let elem of document.querySelectorAll('p')) {
                 await UTILS.delay(50);
 
-                let origLen = Math.max(elem.textContent.length * 2, 500);
+                let origLen = Math.max(elem.textContent.length * 1, 500);
 
                 ACTIONS.push(
                     function() {
 
-                        let random = Math.floor(Math.random() * 50 + 30);
+                        // let random = Math.floor(Math.random() * 2 + 4);
 
-                        if (FRAME_COUNT % random !== 0)
-                            return;
+                        // if (FRAME_COUNT % random !== 0)
+                        //     return;
 
-                        let txt = elem.textContent + 'AH';
+                        let txt = elem.textContent.substring(0, origLen);
                         let pos = Math.floor(Math.random() * txt.length);
                         txt = txt.substring(0, pos) + 'AH' + txt.substring(pos);
-                        txt = txt.substring(0, origLen);
                         elem.textContent = txt;
 
                         elem.style.fontSize = (1 + Math.sin(FRAME_COUNT * 0.01) * 0.5) + 'em';
