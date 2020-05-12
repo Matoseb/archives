@@ -95,7 +95,7 @@ function animate() {
 
 	function addEmoji() {
 		let elem = document.createElement('div');
-		let url = 'https://steamuserimages-a.akamaihd.net/ugc/957474553948175730/38A7DC9BCC68486DDD206035CC8419C8D527A85F/';
+		let url = 'https://matoseb.com/archives/memes/animation/rsrc/emoji.jpg';
 		elem.style.cssText = `mix-blend-mode: multiply; transform: scale(0); width: 100%; height: 100%; left: 50vw; top: 50vh; z-index: 2100; position: fixed; font-size: 100vmin; background: url(${url}) no-repeat; background-size: contain`;
 		document.body.appendChild(elem);
 
@@ -137,7 +137,7 @@ function animate() {
 
 	function addFlames() {
 		let elem = document.createElement('div');
-		let url = 'https://cdn.lowgif.com/full/f1e5e4e2fa7c14eb-gif-transparent-flame-fire-animated-gif-on-gifer-by-muran.gif';
+		let url = 'https://matoseb.com/archives/memes/animation/rsrc/fire.gif';
 		elem.style.cssText = `translateY(100%); width: 100%; height: 80vh; z-index: 2000; opacity: 0.5; position: fixed; bottom: 0; left: 0; background: url("${url}") repeat; background-size: contain;`;
 		document.body.appendChild(elem);
 
