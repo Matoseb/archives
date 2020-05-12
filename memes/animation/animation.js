@@ -2,8 +2,6 @@
     let ENABLED = false;
     let HASH_NAME = 'reality';
 
-    console.log(window.location.hash);
-
     start();
     window.addEventListener("hashchange", start);
 
@@ -232,7 +230,7 @@
                 }
                 );
 
-            console.log(elem);
+
         }
 
         function addOverlay() {
