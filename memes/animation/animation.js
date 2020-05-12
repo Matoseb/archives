@@ -123,6 +123,8 @@
             for (let elem of document.querySelectorAll('p')) {
                 await UTILS.delay(50);
 
+                let origLen = Math.max(elem.textContent.length * 2, 500);
+
                 ACTIONS.push(
                     function() {
 
@@ -134,7 +136,7 @@
                         let txt = elem.textContent + 'AH';
                         let pos = Math.floor(Math.random() * txt.length);
                         txt = txt.substring(0, pos) + 'AH' + txt.substring(pos);
-                        txt = txt.substring(0, 50);
+                        txt = txt.substring(0, origLen);
                         elem.textContent = txt;
 
                         elem.style.fontSize = (1 + Math.sin(FRAME_COUNT * 0.01) * 0.5) + 'em';
