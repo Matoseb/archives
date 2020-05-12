@@ -262,7 +262,7 @@
 
         	for (let elem of document.querySelectorAll('.outer')) {
 
-                await UTILS.delay(100);
+                await UTILS.delay(200);
                 let animation = [
 
                     { transform: 'translate(-20px, 0px) rotate(0deg)' },
