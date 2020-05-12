@@ -9,8 +9,8 @@
 
     function start() {
 
-        // if (!window.location.hash.includes(HASH_NAME) || ENABLED)
-        //     return;
+        if (!window.location.hash.includes(HASH_NAME) || ENABLED)
+            return;
 
         ENABLED = true;
 
