@@ -103,7 +103,7 @@
 			document.body.appendChild(elem);
 
 			elem.animate(
-				[{transform: 'translate(-50%, -50%) scale(0)', opacity: 0}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.3}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.7}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 0}], {
+				[{transform: 'translate(-50%, -50%) scale(0)', opacity: 0}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.3}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.8}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 0}], {
 					duration: 2000,
 					iterations: Infinity,
 					fill: 'forwards',
@@ -208,7 +208,7 @@
 
 			OLDBODY.appendChild(elem);
 
-			let anim = [{transform: `rotate(${angle}deg) translate(100%, 0)`}, {transform: `rotate(${angle}deg) translate(-100%, 0)`}];
+			let anim = [{transform: `rotate(${angle}deg) translate(200vw, 0)`}, {transform: `rotate(${angle}deg) translate(-200vw, 0)`}];
 			elem.animate(
 				anim, {
 					duration,
