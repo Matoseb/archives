@@ -2,6 +2,8 @@
 	let ENABLED = false;
 	let HASH_NAME = 'reality';
 
+	console.log(window.location.hash);
+
 	start();
 	window.addEventListener("hashchange", start);
 
@@ -67,7 +69,7 @@
 			newBody.appendChild(OLDBODY);
 			document.documentElement.appendChild(newBody);
 			document.body = newBody;
-			
+
 			changeMenu();
 			await UTILS.delay(1*1000);
 			changeParag();
@@ -91,7 +93,7 @@
 			addText('FUUUUUUCKKK', 0, 90);
 			await UTILS.delay(1*1000);
 			addEmoji();
-			
+
 		}
 
 		function addEmoji() {
@@ -101,7 +103,7 @@
 			document.body.appendChild(elem);
 
 			elem.animate(
-				[{transform: 'translate(-50%, -50%) scale(0)', opacity: 0}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.3}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 0}], {
+				[{transform: 'translate(-50%, -50%) scale(0)', opacity: 0}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.3}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 1, offset: 0.7}, {transform: 'translate(-50%, -50%) scale(1.5)', opacity: 0}], {
 					duration: 2000,
 					iterations: Infinity,
 					fill: 'forwards',
