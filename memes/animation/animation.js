@@ -89,7 +89,7 @@
             await UTILS.delay(1 * 1000);
             addText('MARCHE PAAAAAS', 5, 0);
             await UTILS.delay(1 * 1000);
-            addText('FUUUUUUCKKK', 40, 90);
+            addText('NUITS BLAAAAANCHEES', 40, 90);
             await UTILS.delay(1 * 1000);
             addEmoji();
 
