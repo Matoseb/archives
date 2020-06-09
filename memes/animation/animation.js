@@ -1,6 +1,6 @@
 (function() {
     let ENABLED = false;
-    let HASH_NAME = 'reality';
+    let HASH_NAME = 'butwhy';
 
     start();
     window.addEventListener("hashchange", start);
