@@ -1,14 +1,14 @@
 (function() {
     let ENABLED = false;
     let HASH_NAMES = ['reality', 'irl', 'inreality'];
-    const {origin} = new URL(document.currentScript.src)
+    const {origin} = document.currentScript ? new URL(document.currentScript.src) || {origin: "https://matoseb.github.io"}
 
     start();
     window.addEventListener("hashchange", start);
 
     function start() {
 
-        if (!HASH_NAMES.has(hash => window.location.hash.includes(hash)) || ENABLED)
+        if (!HASH_NAMES.some(hash => window.location.hash.includes(hash)) || ENABLED)
             return;
 
         ENABLED = true;
