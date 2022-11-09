@@ -1,7 +1,7 @@
 (function() {
     let ENABLED = false;
     let HASH_NAMES = ['reality', 'irl', 'inreality'];
-    const {origin} = document.currentScript ? new URL(document.currentScript.src) || {origin: "https://matoseb.github.io"};
+    const {origin} = document.currentScript ? new URL(document.currentScript.src) : {origin: "https://matoseb.github.io"};
 
     start();
     window.addEventListener("hashchange", start);
