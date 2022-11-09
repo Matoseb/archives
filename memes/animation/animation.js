@@ -1,13 +1,14 @@
 (function() {
     let ENABLED = false;
-    let HASH_NAME = 'reality';
+    let HASH_NAMES = ['reality', 'irl', 'inreality'];
+    const {origin} = new URL(document.currentScript.src)
 
     start();
     window.addEventListener("hashchange", start);
 
     function start() {
 
-        if (!window.location.hash.includes(HASH_NAME) || ENABLED)
+        if (!HASH_NAMES.has(hash => window.location.hash.includes(hash)) || ENABLED)
             return;
 
         ENABLED = true;
@@ -97,7 +98,7 @@
 
         function addEmoji() {
             let elem = document.createElement('div');
-            let url = 'https://matoseb.com/archives/memes/animation/rsrc/emoji.jpg';
+            let url = origin + '/archives/memes/animation/rsrc/emoji.jpg';
             let cachedImg = new Image();
 
             cachedImg.onload = function() {
@@ -145,7 +146,7 @@
 
         function addFlames() {
             let elem = document.createElement('div');
-            let url = 'https://matoseb.com/archives/memes/animation/rsrc/fire.gif';
+            let url = origin + '/archives/memes/animation/rsrc/fire.gif';
 
             let cachedImg = new Image();
 
